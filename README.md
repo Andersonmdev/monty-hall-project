@@ -1,6 +1,8 @@
 # Monty Hall Project
 
-+ VueJS
+Implementation of the [Monty Hall](https://en.wikipedia.org/wiki/Monty_Hall_problem) problem.
+
++ Development with [Vue.js](https://vuejs.org/).
 
 ## Project setup
 ```
