@@ -4,11 +4,11 @@
     <div class="form">
       <div v-if="!started">
         <label for="portsAmount">Quantas portas?</label>
-        <input type="text" id="portsAmount" size="3" v-model.number="portsAmount"> 
+        <input type="number" id="portsAmount" size="3" v-model.number="portsAmount"> 
       </div>
       <div v-if="!started">
         <label for="portsAmount">Qual a porta é premiada?</label>
-        <input type="text" id="portsAmount" size="3" v-model.number="selectedPort">
+        <input type="number" id="portsAmount" size="3" v-model.number="selectedPort">
       </div>
       <button v-if="!started" @click="started = true">Iniciar</button>
       <button v-if="started" @click="started = false">Reiniciar</button>
@@ -18,11 +18,19 @@
         <Door :hasGift="i == selectedPort" :number="i" />
       </div>
     </div>
+    <footer class="footer">
+      <a href="https://github.com/Andersonmdev" target="_blank">Develop by Andersonmdev</a>
+      <a href="https://www.flaticon.com/free-icons/gift" title="gift icons" target="_blank">
+        Gift icons created by Freepik - Flaticon
+      </a>
+    </footer>
   </div>
 </template>
 
 <script>
 import Door from './components/Door';
+
+document.title = 'Monty Hall Show';
 
 export default {
   name: 'App',
@@ -51,6 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 98vh;
 }
 
 #app h1 {
@@ -68,9 +77,25 @@ body {
   margin-bottom: 40px;
 }
 
-.fomr, .form input, .form button {
+.form, .form input, .form button {
   margin-bottom: 10px;
   font-size: 2rem;
+}
+
+.form input {
+  width: 80px;
+  margin-left: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.form button {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #0004;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .doors {
@@ -79,5 +104,17 @@ body {
   justify-content: space-around;
 
   flex-wrap: wrap;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
 }
 </style>
