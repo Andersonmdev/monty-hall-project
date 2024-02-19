@@ -4,11 +4,21 @@
     <div class="form">
       <div v-if="!started">
         <label for="portsAmount">Quantas portas?</label>
-        <input type="number" id="portsAmount" size="3" v-model.number="portsAmount"> 
+        <input
+          type="number"
+          id="portsAmount"
+          size="3"
+          v-model.number="portsAmount"
+        />
       </div>
       <div v-if="!started">
         <label for="portsAmount">Qual a porta é premiada?</label>
-        <input type="number" id="portsAmount" size="3" v-model.number="selectedPort">
+        <input
+          type="number"
+          id="portsAmount"
+          size="3"
+          v-model.number="selectedPort"
+        />
       </div>
       <button v-if="!started" @click="started = true">Iniciar</button>
       <button v-if="started" @click="started = false">Reiniciar</button>
@@ -19,8 +29,14 @@
       </div>
     </div>
     <footer class="footer">
-      <a href="https://github.com/Andersonmdev" target="_blank">Develop by Andersonmdev</a>
-      <a href="https://www.flaticon.com/free-icons/gift" title="gift icons" target="_blank">
+      <a href="https://github.com/Andersonmdev" target="_blank"
+        >Develop by Andersonmdev</a
+      >
+      <a
+        href="https://www.flaticon.com/free-icons/gift"
+        title="gift icons"
+        target="_blank"
+      >
         Gift icons created by Freepik - Flaticon
       </a>
     </footer>
@@ -28,21 +44,21 @@
 </template>
 
 <script>
-import Door from './components/Door';
+import Door from "./components/Door";
 
-document.title = 'Monty Hall Show';
+document.title = "Monty Hall Show";
 
 export default {
-  name: 'App',
+  name: "App",
   components: { Door },
-  data: function() {
+  data: function () {
     return {
       started: false,
       portsAmount: 3,
       selectedPort: null,
-    }
+    };
   },
-}
+};
 </script>
 
 <style>
@@ -52,7 +68,7 @@ export default {
 
 body {
   color: #fff;
-  background: linear-gradient(to right, #005AA7, #FFFDE4);
+  background: linear-gradient(to right, #005aa7, #fffde4);
 }
 
 #app {
@@ -77,7 +93,9 @@ body {
   margin-bottom: 40px;
 }
 
-.form, .form input, .form button {
+.form,
+.form input,
+.form button {
   margin-bottom: 10px;
   font-size: 2rem;
 }
@@ -106,7 +124,7 @@ body {
   flex-wrap: wrap;
 }
 
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;

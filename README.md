@@ -1,11 +1,8 @@
-# Monty Hall Project
+# Monty Hall Problem Simulator
 
-Implementation of the [Monty Hall](https://en.wikipedia.org/wiki/Monty_Hall_problem) problem, development with [Vue.js](https://vuejs.org/).
-The game is played as follows:
+## Overview
 
-1.  Choose the number of doors (3 by default)
-2.  Choose a door where the prize will be
-3.  Start the game and choose a door
+This project is a web-based implementation of the famous [Monty Hall](https://en.wikipedia.org/wiki/Monty_Hall_problem) problem using Vue.js. The Monty Hall problem is a probability puzzle that is based on a game show scenario. The objective is to simulate the outcomes of the Monty Hall game and help users understand the counterintuitive nature of the problem.
 
 ## Install dependencies
 
@@ -13,9 +10,13 @@ The game is played as follows:
 npm install
 ```
 
-### Run the project
+### Run project
 
 ```bash
 
 npm run serve
 ```
+
+## License
+
+This project is licensed under the [MIT License](/LICENSE.md).

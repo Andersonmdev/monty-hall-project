@@ -11,22 +11,22 @@
 </template>
 
 <script>
-import Gift from './Gift';
+import Gift from "./Gift";
 
 export default {
-  name: 'Door',
+  name: "Door",
   components: { Gift },
   props: {
     number: {},
     hasGift: { type: Boolean },
   },
-  data: function() {
+  data: function () {
     return {
       open: false,
       selected: false,
-    }
+    };
   },
-}
+};
 </script>
 
 <style>
@@ -74,7 +74,7 @@ export default {
   padding: 20px;
 }
 
-.door .knob{
+.door .knob {
   height: 20px;
   width: 20px;
   border-radius: 10px;

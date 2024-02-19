@@ -9,8 +9,8 @@
 
 <script>
 export default {
-  name: 'Gift'
-}
+  name: "Gift",
+};
 </script>
 
 <style>
